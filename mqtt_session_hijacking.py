@@ -259,8 +259,6 @@ class MQTTExperiment:
             self.phase_1_victim_establish_persistent_session()
             self.phase_2_publisher_send_while_victim_offline()
             self.phase_3_attacker_attempt_hijack()
-            # Optional: uncomment to prove broker still has queued messages for the legit client
-            # self.phase_4_victim_reconnect_and_drain(expected=2)
             self.analyze_results()
             return True
         except Exception as e:
